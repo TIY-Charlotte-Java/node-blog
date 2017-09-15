@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body>
+<h1>Welcome to my Interblag.</h1>
+    {{#post}}
+      <span>Post By: {{user.name}}</span>
+      <span>Title: {{title}}</span>
+      <span>Content: {{contents}}</span>
+    {{/post}}
+
+    <a href="/"> Go Home.</a>
+  </body>
+</html>

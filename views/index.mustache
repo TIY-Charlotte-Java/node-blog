@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body>
+<h1>Welcome to my Interblag.</h1>
+
+<!-- form to post a post -->
+<form action="/posts" method="post">
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title">
+
+  <label for="content">Content:</label>
+  <textarea name="content" id="content"></textarea>
+
+  <input type="submit">
+</form>
+
+  <ul>
+    {{#posts}}
+      <li>
+        <span>Post By: {{user.name}}</span>
+        <span>Title: <a href="/posts/{{id}}">{{title}}</a></span>
+        <span>Content: {{contents}}</span>
+      </li>
+    {{/posts}}
+  </ul>
+</html>
